@@ -4,7 +4,7 @@ import pandas as pd
 #load the dataset, consisting of just under 50000 books representing all genres
 df = pd.read_csv('../data/amazon_books.csv')
 
-rec_df = df[['title', 'author', 'description', 'publisher', 'customer_reviews', 'stars']].copy()
+rec_df = df[['title', 'author', 'description', 'publisher', 'customer_reviews', 'stars', 'url']].copy()
 #Remove titles with no publisher listed because those titles tended to be either about writing or about a book, rather than being a narrative work
 rec_df.dropna(subset=['publisher'])
 
