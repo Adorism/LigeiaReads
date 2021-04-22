@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title> LigeiaReads</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Oswald:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+            h1 
+            {text-align: center;
+            font-family: 'IM Fell English SC', serif;
+            font-size: 55;
+            font-weight: 800;
+            }
+                
+            body
+            {
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-image: url("../static/builtin/book.jpg");
+            margin-top: 40px;
+            }
+
+        </style>
+        
+    </head>
+<body>
+    <div class="header">
+        <h1 style='color:#FFF'>Ligeia Reads: Your Horror Librarian</h1>
+        
+        <p style="margin: 2% 15%; color: #210919; background-color: rgba(190, 177, 175, 0.94); font-size: 25">
+            <span>You might recognize Ligeia as the lost love in one of Edgar Allan Poe's chilling tales.<br>
+                Here she will serve as your guide to our horror collection, offering tailored recommendations for new books to read based on what words most draw you in as a reader.<br>
+                </span> 
+            </p>
+        <p style="color: #f5f1f3; font-size: 30"> Choose at least three words from the options below that ignite your imagination and get ready for some frightfully good books! </p>
+      </div>
+    
+    <form methods = "POST" action="{{url_for('form')}}">
+        {{form.csrf_token}}
+        {{form.name.label}}
+        {{form.name}}
+        
+    </form>
+    <button style = "font-size: 20">Haunted</button> &nbsp;&nbsp;&nbsp;&nbsp;  
+    <button style = "font-size: 20">Monster</button> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style = "font-size: 20">Lore</button> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style = "font-size: 20">Grave</button>
+    <div>
+        &nbsp;&nbsp;&nbsp;
+    </div>
+    <button style = "font-size: 20">Animal</button> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style = "font-size: 20">Dread</button> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style = "font-size: 20">Claw</button> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style = "font-size: 20">Eerie</button>
+    <div>
+        &nbsp;&nbsp;&nbsp;
+    </div>
+    <button style = "font-size: 20">Old</button> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style = "font-size: 20">Mystery</button> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style = "font-size: 20">Dark</button> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style = "font-size: 20">Fear</button>
+    <div>
+        &nbsp;&nbsp;&nbsp;
+    </div>
+    <button style = "font-size: 20">Ghost</button> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style = "font-size: 20">Terror</button> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style = "font-size: 20">Gore</button> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style = "font-size: 20">Death</button>
+    <div>
+        &nbsp;&nbsp;&nbsp;
+    </div>
+    <button style = "font-size: 20">Blood</button> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style = "font-size: 20">Danger</button> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style = "font-size: 20">Atmosphere</button> &nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style = "font-size: 20">Supernatural</button>
+    <div>
+        &nbsp;&nbsp;&nbsp;
+    </div>
+    <button type="submit" style = "font-size: 30" >Submit</button>
+
+</body>
+</html>
