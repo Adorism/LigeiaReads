@@ -5,6 +5,6 @@ The choice to read is always an investment. Whether you are buying a book or bor
 
 So it makes sense that readers often seek advice about what books they would most enjoy. My web application is named Ligeia Reads as a nod to Edgar Allan Poe's gothic tales and it caters specifically to horror fans. It uses natural language processing to make book recommendations based on a reader's tastes. <br>
 
-![screenshot](images/)
+![screenshot](images/screenshot.png)
 
 
