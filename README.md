@@ -7,4 +7,15 @@ So it makes sense that readers often seek advice about what books they would mos
 
 ![screenshot](images/screenshot.png)
 
+## The Data
+
+## Preprocessing and EDA
+
+## My Model
+
+## Flask App
+
+## Future Plans
+
+## References and Further Reading
 
