@@ -12,6 +12,7 @@ So it makes sense that readers often seek advice about what books they would mos
 ## Preprocessing and EDA
 
 ## My Model
+![model overview](images/model.png)
 
 ## Flask App
 
