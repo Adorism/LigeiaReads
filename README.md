@@ -10,6 +10,7 @@ So it makes sense that readers often seek advice about what books they would mos
 ## The Data
 
 ## Preprocessing and EDA
+![ratings distribution](images/graph.png)
 
 ## My Model
 ![model overview](images/model.png)
