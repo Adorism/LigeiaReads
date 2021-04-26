@@ -8,6 +8,7 @@ import string
 from nltk.stem import WordNetLemmatizer
 from nltk import word_tokenize
 from nltk.corpus import stopwords
+
 nlp = spacy.load('en_core_web_lg')
 
 with open('../data/book_model', 'rb') as f:
@@ -19,7 +20,7 @@ stop = stopwords.words('english')
 stop_words_ = set(stopwords.words('english'))
 wn = WordNetLemmatizer()
 
-def black_txt(token):
+def keep_txt(token):
     return  token not in stop_words_ and token not in list(string.punctuation)  and len(token)>2   
 
 def clean_txt(text):
@@ -29,8 +30,8 @@ def clean_txt(text):
     text = re.sub("(\\d|\\W)+"," ",text)
     text = text.replace("kindle", "")
     text = text.replace("edition", "")
-    clean_text = [ wn.lemmatize(word, pos="v") for word in word_tokenize(text.lower()) if black_txt(word)]
-    clean_text2 = [word for word in clean_text if black_txt(word)]
+    clean_text = [ wn.lemmatize(word, pos="v") for word in word_tokenize(text.lower()) if keep_txt(word)]
+    clean_text2 = [word for word in clean_text if keep_txt(word)]
     return " ".join(clean_text2)
 
 reader_choices = ['monster', 'lore', 'grave', 'animal', 'dread', 'haunted', 'claw', 'eerie', 'old', 'mystery', 'dark', 'fear', 'ghost', 'terror', 'blood', 'gore', 'death', 'danger', 'atmosphere', 'supernatural']
@@ -44,7 +45,7 @@ user_recc_df = user_df[['user_id', 'text']]
 u = 1
 index = np.where(user_recc_df['user_id']==u)[0][0]
 user_q = user_recc_df.iloc[[index]]
-user_q
+print(user_q)
 
 
 
@@ -66,7 +67,7 @@ list_docs = []
 for i in range(len(book_list_df)):
     doc = nlp("u'" + book_list_df['text'][i] + "'")
     list_docs.append((doc,i))
-    print(len(list_docs))
+    
 
 def calculateSimWithSpaCy(nlp, df, user_text, n=6):
     # Calculate similarity using spaCy
@@ -91,4 +92,4 @@ df_recom_spacy.reset_index(inplace=True)
 index_spacy = df_recom_spacy[2]
 list_scores = df_recom_spacy[3]
 
-get_recommendation(index_spacy, book_list_df, list_scores)
+print(get_recommendation(index_spacy, book_list_df, list_scores))
