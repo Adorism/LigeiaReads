@@ -30,5 +30,3 @@ My next steps to enhance this reader’s advisory tool would be to: <br>
 (3)I would offer ready-to-go  read-alike suggestions for books the user has already enjoyed and that would enhance the sense of personalization and discovery. 
 
 
-## References and Further Reading
-
