@@ -1,6 +1,7 @@
 # Ligeia Reads
 ## A book recommender for horror fans<br><br>
 
+[Capstone Presentation Video](https://youtu.be/p2SB5SClOis)
 [Presentation Link](https://docs.google.com/presentation/d/1Dqjpqgum1q3hSZ6z1A5bbvgXSA3sR3BplZJOtmb83g4/preview "Ligeia Reads Presentation for Capstone 3")
 
 The choice to read is always an investment. Whether you are buying a book or borrowing one, there's a substantial investment of time at stake. <br><br>
