@@ -18,7 +18,7 @@ So it makes sense that readers often seek advice about what books they would mos
 
 ## My Workflow
 ![workflow overview](images/flow.jpg)
-![Ligeia details] (images/flow1.jpg)
+![Ligeia details](images/flow1.jpg)
 
 ## Flask App
 <br>
